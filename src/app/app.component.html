@@ -4,7 +4,27 @@
     <button class="btn-trans"(click)="cambiarIdioma('en')" id="en">EN</button>
   </div>
 
-  <div class="btn-container">
+  <div class="btn-container" *ngIf="!flagWidth">
+    <button class="jost" id="btn-home" (click)="GoSection('home')" >Home</button>
+    <button class="jost" id="btn-sobre-mi" (click)="GoSection('sobre-mi')" >{{ 'BTN-ABOUT' | translate }}</button>
+    <button class="jost" id="btn-skills" (click)="GoSection('skills')" >Skills</button>
+    <button class="jost" id="btn-proyectos" (click)="GoSection('proyectos')" >{{ 'BTN-PROYECT' | translate }}</button>
+    <button class="jost" id="btn-contacto" (click)="GoSection('contacto')" >{{ 'BTN-CONTACT' | translate }}</button>
+  </div>
+
+  <div class="container-menu" *ngIf="flagWidth">
+    <div class="menu-toggle" >
+      <input type="checkbox" id="checkbox" (click)="toggleMenu()">
+      <label for="checkbox" class="toggle">
+          <div class="bars" id="bar1"></div>
+          <div class="bars" id="bar2"></div>
+          <div class="bars" id="bar3"></div>
+      </label>
+
+    </div>
+  </div>
+
+  <div class="menu" id="menu"  *ngIf="flagWidth">
     <button class="jost" id="btn-home" (click)="GoSection('home')" >Home</button>
     <button class="jost" id="btn-sobre-mi" (click)="GoSection('sobre-mi')" >{{ 'BTN-ABOUT' | translate }}</button>
     <button class="jost" id="btn-skills" (click)="GoSection('skills')" >Skills</button>
@@ -12,10 +32,10 @@
     <button class="jost" id="btn-contacto" (click)="GoSection('contacto')" >{{ 'BTN-CONTACT' | translate }}</button>
   </div>
 </div>
-<div class="container">
+<div class="container" style="overflow-x: hidden;">
 
-  <div class="presentacion" id="home" [translate]="">
-    <div>
+  <div class="presentacion" id="home">
+    <div class="descripcion">
       <h3 class="permanent-marker-regular">{{ 'GREETING' | translate }}</h3>
       <h1 class="permanent-marker-regular">Matías Altamira,</h1>
       <p class="jost">{{ 'DESCRIPTION' | translate }}</p>
@@ -23,10 +43,10 @@
       <button (click)="GoSection('contacto')">{{ 'CONTACT' | translate }}</button>
     </div>
 
-    <div>
+    <div class="container-img">
       <img src="/images/perfil.jpg">
       <h4 class="jost">{{ 'QUOTE' | translate }}</h4>
-      <h4 class="jost" style="text-align: end;">- Alejandro Taboada</h4>
+      <h4 class="jost">- Alejandro Taboada</h4>
     </div>
   </div>
 
@@ -76,14 +96,13 @@
 
       </div>
 
-      <div class="container-cards">
-        <h3>{{ 'LBL-ESTUDIOS' | translate }}</h3>
-        <h3>Hobbies</h3>
-      </div>
+      <!-- <div class="container-cards">
+      </div> -->
 
       <div class="container-cards">
 
         <div class="columna">
+          <h3>{{ 'LBL-ESTUDIOS' | translate }}</h3>
 
           <div class="card">
             <svg class="wave" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
@@ -133,6 +152,7 @@
         </div>
 
         <div class="columna">
+          <h3>Hobbies</h3>
 
           <div class="card">
             <svg class="wave" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">

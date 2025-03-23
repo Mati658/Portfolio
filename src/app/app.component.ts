@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, inject, OnInit, signal, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, inject, OnInit, signal, ViewChild } from '@angular/core';
 import 'swiper/css';
 import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -37,9 +37,24 @@ export class AppComponent implements OnInit, AfterViewInit{
 
   swiperElement = signal<SwiperContainer | null>(null);
   @ViewChild('formElement') formElement!: ElementRef;
+
   translate = inject(TranslateService);
   btnAnterior : any;
 
+  screenWidth: number = window.innerWidth;
+  flagWidth: boolean = false;
+  flagMenu : boolean = false;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    this.screenWidth = window.innerWidth; 
+    this.flagWidth = this.screenWidth <= 560; 
+    if (!this.flagWidth)
+      this.flagMenu = false;
+    
+    this.botonSelect(this.btnAnterior.id)
+  } 
+  
   btnAnteriorLng : any;
 
   name: string = '';
@@ -49,7 +64,10 @@ export class AppComponent implements OnInit, AfterViewInit{
 
   constructor(){
     this.translate.setDefaultLang('es');
+    // let window = window.width
   }
+
+  
 
   cambiarIdioma(lang: string) {
     this.translate.use(lang);
@@ -87,6 +105,8 @@ export class AppComponent implements OnInit, AfterViewInit{
     this.swiperElement.set(swiperElemConstructor as SwiperContainer);
     this.swiperElement()?.initialize();
 
+    this.screenWidth = window.innerWidth; 
+    this.flagWidth = this.screenWidth <= 560; 
   }
 
   ngAfterViewInit(): void {
@@ -105,6 +125,18 @@ export class AppComponent implements OnInit, AfterViewInit{
     if (this.btnAnteriorLng) {
       this.btnAnteriorLng.style.color = "#14AE5C";
     }
+      
+    // this.desactivarAnimMenu();
+  }
+  
+  desactivarAnimMenu(){
+    const menu = document.querySelector('.menu');
+      if(menu)
+        menu.classList.remove('slide-out-right');
+
+      const menuId = document.getElementById('menu');
+      if(menuId)
+        menuId.style.opacity = "0";
   }
 
   enviarMail() {
@@ -165,11 +197,11 @@ export class AppComponent implements OnInit, AfterViewInit{
     const button = document.getElementById(idButton);
     if (button) {
       if (button == this.btnAnterior) {
+        button.style.color = "#14AE5C";
         return;
       }
 
       button.style.color = "#14AE5C";
-
       if (this.btnAnterior) {
         this.btnAnterior.style.color = "aliceblue";
       }
@@ -177,5 +209,28 @@ export class AppComponent implements OnInit, AfterViewInit{
       this.btnAnterior = button;
     }
   }
+
+  toggleMenu() {
+    this.flagMenu = !this.flagMenu;
+
+    if(this.flagMenu){
+      const menu = document.querySelector('.menu');
+      if(menu){
+        menu.classList.remove('slide-out-right');
+        menu.classList.add('slide-in-right');
+
+      }
+    
+    }else{
+      const menu = document.querySelector('.menu');
+      if(menu){
+        menu.classList.remove('slide-in-right');
+        menu.classList.add('slide-out-right');
+      }
+    }
+
+
+
+}
 
 }
