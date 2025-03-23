@@ -1,1 +1,459 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Dhurjati&family=Honk&family=Knewave&family=Lugrasimo&family=Modak&family=Permanent+Marker&family=Rampart+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rouge+Script&display=swap');
+.permanent-marker-regular {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Dhurjati&family=Honk&family=Jost:ital,wght@0,100..900;1,100..900&family=Knewave&family=Lugrasimo&family=Modak&family=Permanent+Marker&family=Rampart+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rouge+Script&display=swap');
+.jost {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Dhurjati&family=Honk&family=Jost:ital,wght@0,100..900;1,100..900&family=Knewave&family=Lugrasimo&family=Modak&family=Permanent+Marker&family=Rampart+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rouge+Script&family=Rubik+Doodle+Shadow&display=swap');
+.rubik-doodle-shadow-regular {
+    font-family: "Rubik Doodle Shadow", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #14AE5C;
+}
+   
+//--------------------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------------------------
+
+.background{
+    background-color: #121212;
+}
+
+.header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+    box-shadow: 0px 1px 5px #14AE5C;
+    z-index: 10;
+    background: #121212a8;
+
+    .translate{
+        display: flex;
+        // background: violet;
+        justify-content: flex-start;
+        .btn-trans{
+            font-size: 1.5rem;
+            background-color:#00000000;
+            outline: none;
+            position: relative;
+            border: none;
+            right: 0;
+            cursor: pointer;
+            transition: 100ms;
+            color: aliceblue;
+        }:active{
+            transform: translateY(5px);
+        }
+    }
+
+    .btn-container{
+        display: flex;
+        // background: violet;
+        justify-content: flex-end;
+        width: 90%;
+    }
+    
+    button{
+        font-size: 1.5rem;
+        background-color:#00000000;
+        outline: none;
+        position: relative;
+        border: none;
+        right: 0;
+        cursor: pointer;
+        transition: 100ms;
+        color: aliceblue;
+      }
+      
+    button:active{
+        transform: translateY(5px);
+      }
+}
+
+
+.container{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    // background: blue;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    gap: 100px;
+
+    .presentacion{
+        width: 90%;
+        display: flex;
+
+        h3, h4, p{color: aliceblue;}
+
+        h1{
+            color: #14AE5C;
+            font-size: 36px;
+            margin-top: -20px;
+            min-width: 300px;
+            margin-left: 40px;
+        }
+
+        h4{
+            width: 130%;
+            transform: translateX(-60px);
+        }
+        
+        p{
+            width: 80%;
+            height: auto;
+        }
+
+        img{
+            width: 245px;
+            height: 256px;
+            border-end-end-radius: 103px;
+            border-end-start-radius: 64px;
+            border-start-start-radius: 103px;
+            border-start-end-radius: 77px;
+            box-shadow: 2px 5px 0px 12px #9D927D;
+            
+        }
+
+        button {
+            position: relative;
+            padding: 12px 20px;
+            background: #14AE5C;
+            font-size: 17px;
+            font-weight: 500;
+            color: aliceblue;
+            border: 3px solid #14AE5C;
+            border-radius: 8px;
+            box-shadow: 0 0 0 #14AE5C;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            transition:linear 100ms;
+        }  
+        
+        button:active{
+            transform: translateY(5px);
+        }      
+    }
+
+    .sobre-mi{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+
+        h1{
+            height: fit-content; 
+            font-size: 3rem;
+        }
+
+        h3,h6{color: aliceblue;}
+                
+        h3{font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif}
+
+        h6{
+            font-size: large;
+            height: fit-content;
+        }
+
+        .info{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            // gap: 10px;
+            height: fit-content;
+            
+            > * { 
+                flex: 1 1 calc(49% + 9px); 
+            }
+
+           .tag{
+            display: grid;
+            grid-template-columns: 20% 5% auto;
+            gap: 55px;
+            align-items: center;
+            min-width: 400px;
+            height: 50px;
+           }
+        }
+
+        .container-cards{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            column-gap: 50px;
+
+            .columna{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                width: 100%;
+            }
+
+            .card {
+                width: 100%;
+                height: 110px;
+                border-radius: 8px;
+                box-sizing: border-box;
+                padding: 10px 25px;
+                background-color: #1E1E1E;
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                margin-top: 10px;
+              }
+              .wave {
+                position: absolute;
+                transform: rotate(90deg);
+                left: -45px;
+                top: 45px;
+                width: 120px;
+                fill: #14AE5C;
+              }
+             
+              .message-text-container {
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                // display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                flex-grow: 1;
+              }
+              .message-text, .sub-text {
+                margin: 0;
+                display: -webkit-box;
+                
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+              }
+              .message-text {
+                color: aliceblue;
+                line-clamp: 2;
+                -webkit-line-clamp: 2;
+                font-size: 17px;
+                font-weight: 700;
+              }
+              .sub-text {
+                font-size: 14px;
+                line-clamp: 3;
+                -webkit-line-clamp: 3;
+                color: #c1c1c1;
+              }
+        }
+    }
+
+    .skills{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+
+        h1{
+            height: fit-content; 
+            font-size: 3rem;
+        }
+
+        h3,h6{color: aliceblue;}
+                
+        h3{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            // text-align: center;
+        }
+
+
+        .container-skills{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            column-gap: 50px;
+            width: 100%;
+            justify-items: center;
+
+            .columna{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                width: 65%;
+            }
+        }
+
+    }
+
+    .proyectos{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+
+
+        h1{
+            height: fit-content; 
+            font-size: 3rem;
+        }
+
+        h3,h6{color: aliceblue;}
+                
+        h3{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .container-proyectos{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            swiper-container {
+                width: 100%;
+              }
+          
+            swiper-slide {
+            width: 256px;
+            height: 300px;
+            border-radius: 8px;
+            background-color: #1E1E1E;
+            position: relative;
+            overflow: hidden;
+            // display: flex;
+            margin-top: 10px;
+            }
+        
+            swiper-slide img {
+            width: 100%;
+            height: 260px;
+            }
+
+            p{
+                color: aliceblue;
+                text-align: center;
+                // margin: 5px;
+                z-index: 10;
+                font-size: large;
+                transform: translateY(-10px);
+                position: relative;
+            }
+        }        
+    }
+
+    .footer{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+
+
+        h1{
+            height: fit-content; 
+            font-size: 3rem;
+        }
+
+        .container-form{
+            // width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            // gap: 10px;
+            height: fit-content;
+            padding-bottom: 100px;
+            
+            > * { 
+                flex: 1 1 calc(49% + 9px); 
+            }
+
+            .columna{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+
+            .form{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .input {
+                width: 70%;
+                height: 35px;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1.5px solid lightgrey;
+                outline: none;
+                transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+                box-shadow: 0px 0px 20px -18px;
+            }
+
+            textarea{
+                width: 90%;
+                height: 150px;
+                padding: 12px;
+                border-radius: 12px;
+                border: 1.5px solid lightgrey;
+                outline: none;
+                transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+                box-shadow: 0px 0px 20px -18px;
+            }
+            
+            .input:hover {
+                border: 4px solid #14AE5C;
+                box-shadow: 0px 0px 20px -17px;
+            }
+            
+            .input:active {
+                transform: scale(0.95);
+            }
+            
+            .input:focus {
+                border: 4px solid #14AE5C;
+            }
+
+            .button {
+                width: 20%;
+                position: relative;
+                padding: 12px 0px;
+                background: #14AE5C;
+                font-size: 17px;
+                font-weight: 500;
+                color: aliceblue;
+                border: 3px solid #14AE5C;
+                border-radius: 8px;
+                box-shadow: 0 0 0 #14AE5C;
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+                transition:linear 100ms;
+                text-align: center;
+                min-width: 55px;
+            }  
+            
+            .button:active{
+                transform: translateY(5px);
+            }  
+
+            p{
+                color: aliceblue;
+                margin-left: 5px;
+                font-size: large;
+                position: relative;
+            }
+        }
+    }
+
+}
+

@@ -1,0 +1,44 @@
+{
+    "BTN-ABOUT": "About",
+    "BTN-PROYECT": "Projects",
+    "BTN-CONTACT": "Contact",
+    "GREETING": "Hello! I am",
+    "DESCRIPTION": "Passionate about the world of programming, I enjoy creating all kinds of projects: from web pages, desktop applications, and games to backend development. I'm always learning and improving to give my best. The greater the challenge, the more motivated I feel. If something gets in the way, I see it as an opportunity to learn and keep growing.",
+    "CONTACT": "Contact me!",
+    "QUOTE": "“If you can imagine it, you can program it”",
+
+    "ABOUT": "ABOUT ME",
+    "LBL-NAME": "Name",
+    "LBL-BIRTH": "Birth",
+    "LBL-DAY": "03/28/2005",
+    "LBL-LOCAL": "Location",
+    "LBL-NATION": "Nationality",
+    "LBL-PHONE": "Phone Number",
+    "LBL-ESTUDIOS": "Education",
+    "ESTUDIE-1": "Higher Technician in Programming and Systems",
+    "UNIVERSITY": "National Technological University",
+    "ESTUDIE-2": "Technician in PC Assembly and Repair",
+    "ESTUDIE-3": "Bachelor with a focus on Natural Sciences",
+    "HOBBIE-1": "Programming",
+    "DESC-1": "Beyond working and making a living from this, I enjoy creating personal projects.",
+    "HOBBIE-2": "Reading",
+    "DESC-2": "I enjoy epic fantasy, especially authors like Brandon Sanderson and Patrick Rothfuss. I love immersing myself in well-constructed and complex worlds, which also influences my creativity.",
+    "HOBBIE-3": "PC Assembly and Repair",
+
+    "LBL-LENGUAGES": "Languages",
+    "LBL-TECHNOLOGIES": "Technologies",
+
+    "PROJECTS": "PROJECTS",
+    "PROJECT-1": "What Should I Cook Today? (In Development)",
+    "PROJECT-2": "Clinic",
+    "PROJECT-3": "Game Room",
+    "PROJECT-4": "Head Soccer",
+    "PROJECT-5": "Altarino Restaurant",
+
+    "LBL-CONTACT": "CONTACT",
+    "PLACEHOLDER-1": "Name",
+    "PLACEHOLDER-2": "Subject",
+    "PLACEHOLDER-3": "Message",
+    "BTN-SEND": "Send"
+
+  }

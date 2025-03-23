@@ -1,0 +1,45 @@
+{
+    "BTN-ABOUT": "Sobre mí",
+    "BTN-PROYECT": "Proyectos",
+    "BTN-CONTACT": "Contacto",
+    "GREETING": "Hola! Yo soy",
+    "DESCRIPTION": "Apasionado por el mundo de la programación, disfruto creando todo tipo de proyectos: desde páginas web, aplicaciones de escritorio y juegos hasta desarrollo backend. Siempre estoy aprendiendo y mejorando para dar lo mejor de mí. Cuanto mayor sea el desafío, más motivado me siento. Si algo se interpone en el camino, lo veo como una oportunidad para aprender y seguir creciendo.",
+    "CONTACT": "¡Contáctame!",
+    "QUOTE": "“Si puedes imaginarlo, puedes programarlo”",
+
+    "ABOUT":"SOBRE MÍ",
+    "LBL-NAME":"Nombre",
+    "LBL-BIRTH":"Nacimiento",
+    "LBL-DAY":"28/03/2005",
+    "LBL-LOCAL":"Localidad",
+    "LBL-NATION":"Nacionalidad",
+    "LBL-PHONE":"Número",
+    "LBL-ESTUDIOS":"Estudios",
+    "ESTUDIE-1":"Técnico Superior en Programación y Sistemas",
+    "UNIVERSITY":"Universidad Tecnológica Nacional",
+    "ESTUDIE-2":"Técnico en Armado y Reparación de PC",
+    "ESTUDIE-3":"Bachiller con orientación en Ciencias Naturales",
+    "HOBBIE-1":"Programación",
+    "DESC-1":"Más allá de trabajar y vivir de esto, disfruto creando proyectos personales.",
+    "HOBBIE-2":"Lectura",
+    "DESC-2":"Disfruto de la fantasía épica, especialmente autores como Brandon Sanderson y Patrick Rothfuss. Me encanta sumergirme en mundos bien construidos y complejos, lo que también influye en mi creatividad.",
+    "HOBBIE-3":"Armado y Reparación de PC",
+
+    "LBL-LENGUAGES":"Lenguajes",
+    "LBL-TECHNOLOGIES":"Tecnologías",
+
+
+    "PROJECTS":"PROYECTOS",
+    "PROJECT-1":"¿Qué Cocino Hoy? (Desarrollo)",
+    "PROJECT-2":"Clínica",
+    "PROJECT-3":"Sala de Juegos",
+    "PROJECT-4":"Head Soccer",
+    "PROJECT-5":"Altarino Restaurante",
+
+    "LBL-CONTACT":"CONTACTO",
+    "PLACEHOLDER-1":"Nombre",
+    "PLACEHOLDER-2":"Asunto",
+    "PLACEHOLDER-3":"Mensaje",
+    "BTN-SEND":"Enviar"
+
+  }
