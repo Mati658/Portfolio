@@ -630,14 +630,17 @@
     <h1 class="rubik-doodle-shadow-regular">{{ "PROJECTS" | translate }}</h1>
 
     <div class="container-proyectos">
-      <swiper-container class="mySwiper" init="false">
+      <swiper-container class="mySwiper" [config]="config">
         <swiper-slide>
           <div>
             <a href="https://quecocinohoy.netlify.app" target="_blank">
               <img src="/images/queCocino.png" />
             </a>
           </div>
-          <p class="jost">¿Qué Cocino Hoy? {{ "PROJECT-1" | translate }}</p>
+          <p class="jost">
+            ¿Qué Cocino Hoy? {{ "PROJECT-1" | translate }} <br />
+            Angular | TypeScript | Supabase
+          </p>
         </swiper-slide>
 
         <swiper-slide>
@@ -646,7 +649,10 @@
               <img src="/images/data_gasolera.png" />
             </a>
           </div>
-          <p class="jost">Data Gasolera (Freelance)</p>
+          <p class="jost">
+            Data Gasolera (Freelance) <br />
+            React | TypeScript | Supabase
+          </p>
         </swiper-slide>
 
         <swiper-slide>
@@ -657,7 +663,10 @@
             >
               <img src="/images/clinica.png" />
             </a>
-            <p class="jost">{{ "PROJECT-2" | translate }}</p>
+            <p class="jost">
+              {{ "PROJECT-2" | translate }} <br />
+              Angular | TypeScript | Firebase
+            </p>
           </div>
         </swiper-slide>
 
@@ -669,7 +678,10 @@
             >
               <img src="/images/sala-juegos.png" />
             </a>
-            <p class="jost">{{ "PROJECT-3" | translate }}</p>
+            <p class="jost">
+              {{ "PROJECT-3" | translate }} <br />
+              Angular | TypeScript | Firebase
+            </p>
           </div>
         </swiper-slide>
 
@@ -680,7 +692,10 @@
                 src="https://img.itch.zone/aW1nLzE2NTc0MTQ4LmpwZw==/315x250%23c/prTr1w.jpg"
               />
             </a>
-            <p class="jost">{{ "PROJECT-4" | translate }}</p>
+            <p class="jost">
+              {{ "PROJECT-4" | translate }} <br />
+              GDscript | Godot
+            </p>
           </div>
         </swiper-slide>
 
@@ -692,7 +707,10 @@
             >
               <img src="/images/altarino.png" />
             </a>
-            <p class="jost">{{ "PROJECT-5" | translate }}</p>
+            <p class="jost">
+              {{ "PROJECT-5" | translate }} <br />
+              Angular | Ionic | TypeScript | Firebase
+            </p>
           </div>
         </swiper-slide>
       </swiper-container>
